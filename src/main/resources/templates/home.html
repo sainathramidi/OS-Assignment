@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html th:lang="#{html.lang}" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" th:href="@{/css/reset.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/css/home.css}" type="text/css">
+<title lang="en">Spring Boot 2 Web Thymeleaf Sample</title>
+</head>
+<body>
+
+<header>
+  <h1 lang="en">BITS WIPL</h1>
+  <br>
+  <h1 lang="en">Open Source Assignment 3 - Group 19</h1>
+
+  <a href="/">
+    <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use th:href = "@{/svg/kanban-fill.svg}"/></svg>-->
+    <img  width="283" height="83" th:src="@{/css/logo.png}" alt="" />
+  </a>
+</header>
+
+
+
+<section id="main">
+  <table class="info">
+    <thead>
+    <tr>
+      <td class="value java-vm-name">Name</td>
+      <td class="value java-vm-name" >ID</td>
+    </tr>
+
+    </thead>
+  <tbody>
+  <tr th:each="student: ${appInfo.team}">
+    <td th:text="${student.name}" />
+    <td class="value spring-version" th:text="${student.id}" />
+  </tr>
+
+  </tbody>
+
+  </table>
+  <br>
+  <table class="info">
+    <tr>
+      <td class="label">
+        <span th:text="#{javaVmName.label}">Java VM name</span>
+      </td>
+      <td class="value java-vm-name">
+        <span th:text="${appInfo.javaVmName}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{javaVmVendor.label}">Java VM vendor</span>
+      </td>
+      <td class="value java-vm-vendor">
+        <span th:text="${appInfo.javaVmVendor}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{javaVmVersion.label}">Java VM version</span>
+      </td>
+      <td class="value java-vm-version">
+        <span th:text="${appInfo.javaVmVersion}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{javaRuntimeName.label}">Java Runtime name</span>
+      </td>
+      <td class="value java-runtime-name">
+        <span th:text="${appInfo.javaRuntimeName}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{javaRuntimeVersion.label}">Java Runtime version</span>
+      </td>
+      <td class="value java-runtime-version">
+        <span th:text="${appInfo.javaRuntimeVersion}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{springVersion.label}">Spring version</span>
+      </td>
+      <td class="value spring-version">
+        <span th:text="${appInfo.springVersion}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{springBootVersion.label}">Spring Boot version</span>
+      </td>
+      <td class="value spring-boot-version">
+        <span th:text="${appInfo.springBootVersion}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{thymeleafVersion.label}">Thymeleaf version</span>
+      </td>
+      <td class="value thymeleaf-version">
+        <span th:text="${appInfo.thymeleafVersion}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{slf4jVersion.label}">SLF4J version</span>
+      </td>
+      <td class="value slf4j-version">
+        <span th:text="${appInfo.slf4jVersion}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{serverInfo.label}">Server</span>
+      </td>
+      <td class="value server-info">
+        <span th:text="${appInfo.serverInfo}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{vmStartTime.label}">VM start time</span>
+      </td>
+      <td class="value vm-start-time">
+        <span th:text="${#temporals.format(appInfo.vmStartTime, #locale)}">???</span>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label">
+        <span th:text="#{currentTime.label}">Current time</span>
+      </td>
+      <td class="value current-time">
+        <span th:text="${#temporals.format(appInfo.currentTime, #locale)}">???</span>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+
+</body>
+</html>

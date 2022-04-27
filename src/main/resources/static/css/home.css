@@ -1,0 +1,48 @@
+.java-vm-name {
+    color: sienna;
+}
+
+.java-vm-vendor {
+    color: sienna;
+}
+
+.java-vm-version {
+    color: sienna;
+}
+
+.java-runtime-name {
+    color: chocolate;
+}
+
+.java-runtime-version {
+    color: chocolate;
+}
+
+.spring-version {
+    color: blue;
+    font-weight: bold;
+}
+
+.spring-boot-version {
+    color: blue;
+}
+
+.thymeleaf-version {
+    color: blue;
+}
+
+.slf4j-version {
+    color: blue;
+}
+
+.server-info {
+    color: rgba(252, 252, 252, 0.98);
+}
+
+.vm-start-time {
+    color: forestgreen;
+}
+
+.current-time {
+    color: red;
+}
