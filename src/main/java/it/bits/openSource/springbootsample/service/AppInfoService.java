@@ -44,9 +44,13 @@ public class AppInfoService {
         appInfo.setServerInfo(getServerInfo());
         appInfo.setVmStartTime(getVmStartZonedDateTime());
         appInfo.setCurrentTime(getCurrentZonedDateTime());
-        List<Team> team = new ArrayList<>();
+		 List<Team> team = new ArrayList<>();
+		/*Adding assignemnt group team members */
+		/*Adding Vivek as  member - START*/
         Team vivek = new Team("VIVEK KR","2020MT93523");
         team.add(vivek);
+		/*Adding Vivek as member - END*/
+		
         appInfo.setTeam(team);
         return appInfo;
     }
