@@ -49,8 +49,11 @@ public class AppInfoService {
 		/*Adding Vivek as  member - START*/
         Team vivek = new Team("VIVEK KR","2020MT93523");
         team.add(vivek);
-		/*Adding Vivek as member - END*/
-		
+    		/*Adding Vivek as member - END*/
+
+	Team harini = new Team("HARINI BACHU","2020MT93528");
+        team.add(harini);
+
         appInfo.setTeam(team);
         return appInfo;
     }
