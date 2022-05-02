@@ -30,3 +30,7 @@ You can build and run the application in many ways (depending on your environmen
 Note: other IDEs (e.g. NetBeans, IntelliJ IDEA) may also be used, the procedure may be very similar/equivalent.
 
 Once the application is running, point your browser to `http://localhost:8080`. You should see a simple page that shows some informations about the running application.
+
+
+
+Modifying the ReadMe for OSSE Assignment
