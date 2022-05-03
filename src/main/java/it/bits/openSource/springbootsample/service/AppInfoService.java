@@ -50,7 +50,7 @@ public class AppInfoService {
         Team vivek = new Team("VIVEK KR", "2020MT93523");
         team.add(vivek);
         /*Adding Vivek as member - END*/
-
+        /*Adding Sainath as  member - START*/
         Team sai = new Team("SAINATH RAMIDI", "2020MT93527");
         team.add(sai);
 
