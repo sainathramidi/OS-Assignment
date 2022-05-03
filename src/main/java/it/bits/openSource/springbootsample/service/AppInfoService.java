@@ -56,10 +56,14 @@ public class AppInfoService {
 
 	Team harini = new Team("HARINI BACHU","2020MT93528");
         team.add(harini);
-
+            /*Adding Shweta as  member - START*/
+        Team shweta = new Team("SHWETA JALAN","2020MT93704");
+        team.add(shweta);
+    		/*Adding Shweta as member - END*/
         appInfo.setTeam(team);
         return appInfo;
     }
+
 
     private String getJavaVmName() {
         return getRuntimeMXBean().getVmName();
